@@ -3,7 +3,7 @@
 # Leaderboard
 
 
-> "Leaderboard" project.
+> Leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 
 ## Built With
@@ -25,6 +25,9 @@ To get a local copy up and running follow these simple example steps.
 - Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/NeckerFree/Leaderboard`
 - On the terminal, navigate into the directory like so: `cd Leaderboard`
 
+### Install
+- in visual studio code build with the command `npm run build` 
+- and run the distribution with the command `npm start`
 ## Authors
 
 👤 **Elio Cortés**
