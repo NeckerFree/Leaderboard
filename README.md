@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack Template
+# Leaderboard
 
 
-> "Webpack Template" is setup webpack template.
+> "Leaderboard" project.
 
 
 ## Built With
@@ -22,8 +22,8 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 - Click the green `Code` button on the repo
 - In your local PC, open your terminal in the folder you would like to clone the project.
-- Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/NeckerFree/Webpack-Template`
-- On the terminal, navigate into the directory like so: `cd Webpack-Template`
+- Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/NeckerFree/Leaderboard`
+- On the terminal, navigate into the directory like so: `cd Leaderboard`
 
 ## Authors
 
@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/NeckerFree/Webpack-Template/issues).
+Feel free to check the [issues page](https://github.com/NeckerFree/Leaderboard/issues).
 
 ## Show your support
 
