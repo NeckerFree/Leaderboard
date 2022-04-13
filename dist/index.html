@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
 <script defer src="main.js"></script></head>
+
 <body>
-    
+
     <header>
         <h1>Leaderboard</h1>
     </header>
     <section>
-        <form action="#" method="get" >
+        <article>
+            <div>
+                <h2>Recent scores</h2>
+                <input type="button" id="refreshButton" value="Refresh">
+            </div>
+            <div>
+            </div>
+        </article>
+        <form action="#" method="get">
             <h2>Add your Score</h2>
-            <input type="text" name="name" id="name" placeholder="Your name" required>
-            <input type="number" name="score" id="score" placeholder="Your score" required>
+            <input type="text" name="name" id="name" placeholder="Your name" required="">
+            <input type="number" name="score" id="score" placeholder="Your score" required="">
             <input type="submit" value="Submit">
         </form>
     </section>
 </body>
+
 </html>
