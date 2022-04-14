@@ -1,19 +1,23 @@
-import Storage from './storage.js';
-import Score from './score.js';
+import { postData, getData } from './api.js';
 
-/**
- * Class to Add, Remove and Get score from Storage from
- */
-export default class StoreScore {
-    scoreData;
+const GAME_ID = 'sSp7OrPloGUwv60DHsj2';
 
-    constructor() { this.scoreData = new Storage('ScoresData'); }
-
-  add= (name, value) => {
-    this.tasksCollection = this.scoreData.getItemStorage();
-    const objectScore = new Score(name, value);
-    this.scoreData.addItemStorage(objectScore);
+const addScore = async (name, value) => {
+  let answer;
+  if (GAME_ID !== '') {
+    const data = { user: `${name}`, score: parseInt(value, 10) };
+    const response = await postData(`games/${GAME_ID}/scores/`, data);
+    answer = response.result;
   }
+  return answer;
+};
 
-  getScoreData=() => this.scoreData.getItemStorage();
-}
+const getScoreData = async () => {
+  let answer = [];
+  if (GAME_ID !== '') {
+    const data = await getData(`games/${GAME_ID}/scores/`);
+    answer = data.result;
+  }
+  return answer;
+};
+export { addScore, getScoreData };
