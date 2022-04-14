@@ -1,10 +1,12 @@
 import './style.css';
-import StoreScore from './modules/storeScore.js';
+import { addScore, getScoreData } from './modules/storeScore.js';
 
 const form = document.getElementsByTagName('form')[0];
-const storeScore = new StoreScore();
+const inputName = document.getElementById('name');
+const inputScore = document.getElementById('score');
+
 const getInitialData = async () => {
-  const scoreData = await storeScore.getScoreData();
+  const scoreData = await getScoreData();
   const scoreList = document.getElementsByClassName('scoreList')[0];
   scoreList.innerHTML = '';
   if (scoreData !== undefined && scoreData !== null) {
@@ -21,16 +23,14 @@ const getInitialData = async () => {
       scoreList.appendChild(p);
     }
   }
-  
- };
-const processData =async () => {
-  const inputName = document.getElementById('name');
-  const inputScore = document.getElementById('score');
-  const response =await storeScore.add(inputName.value, inputScore.value);
-  return response;
 };
-const refresh = async () => {
-  const response = await getInitialData();
+const processData = async (e) => {
+  e.preventDefault();
+  addScore(inputName.value, inputScore.value);
+  form.reset();
+};
+const refresh = () => {
+  const response = getInitialData();
   return response;
 };
 window.addEventListener('load', () => {
@@ -48,6 +48,4 @@ window.addEventListener('load', () => {
   refresh();
 });
 
-form.addEventListener('submit', () => {
-  processData();
-});
+form.addEventListener('submit', processData);
