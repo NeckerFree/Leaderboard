@@ -1,15 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+* {
+  --var_color_black: #000;
+  --var_color_sandybrown: #dbac5c;
+  --var_color_white: #fff;
+  --var_color_khaki: #fcd179;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: 'Nunito', sans-serif;
+}
+
 header {
   margin-left: auto;
   margin-right: auto;
-  max-width: 500px;
+  max-width: 600px;
+  background-color: var(--var_color_black);
+  color: var(--var_color_white);
+  padding-bottom: 0;
+}
+
+h1 {
+  margin: 0 5px;
+}
+
+h2 {
+  color: var(--var_color_white);
+  font-size: 20px;
+  margin-right: 18px;
 }
 
 section {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 600px;
+  justify-content: space-between;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--var_color_sandybrown);
+  padding: 20px  20px;
 }
 
 .columnRecent {
@@ -19,25 +61,32 @@ section {
 .recentScores {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 600px;
+  justify-content: left;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .scoreList {
   border: 1px solid black;
+  width: 200px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 200px;
+  max-width: 150px;
+  border: 1px solid black;
+  background-color: var(--var_color_khaki);
+  padding: 20px 20px;
+  width: 200px;
+  margin-top: 55px;
 }
 
 input[type="button"] {
   height: 20px;
   width: auto;
+  background-color: var(--var_color_khaki);
 }
 
 input[type="submit"] {
@@ -45,6 +94,7 @@ input[type="submit"] {
   width: 60px;
   margin-left: auto;
   margin-top: 10px;
+  background-color: var(--var_color_sandybrown);
 }
 
 input[type="text"] {
@@ -52,13 +102,13 @@ input[type="text"] {
 }
 
 .alternateRow {
-  background-color: #ddd;
-  padding: 2px 2px;
+  background-color: var(--var_color_khaki);
+  padding: 1px 2px;
   margin: 0;
 }
 
 .normalRow {
   background-color: white;
-  padding: 2px 2px;
+  padding: 1px 2px;
   margin: 0;
 }
