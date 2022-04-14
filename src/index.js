@@ -30,8 +30,7 @@ const processData = async (e) => {
   form.reset();
 };
 const refresh = () => {
-  const response = getInitialData();
-  return response;
+  getInitialData();
 };
 window.addEventListener('load', () => {
   const section = document.getElementsByTagName('section')[0];
